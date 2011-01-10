@@ -1,0 +1,88 @@
+2010-08-23  Taro Matsuzawa  <tmatsuzawa _at_ kbmj.com>
+
+	* 2.0.2 Release
+	* [bugfix] ポイントを操作できてしまうバグを修正
+	* [bugfix] 余計なリンクを削除
+	* [bugfix] 携帯のメールアドレスを手動で入力するよう修正
+	* [bugfix] 削除フラグが正常に検索条件にひっかからない点を修正
+
+2010-08-18  Taro Matsuzawa  <tmatsuzawa _at_ kbmj.com>
+
+	* 2.0.1 Release
+	* [bugfix] 非会員で購入時に遷移ができない問題を修正
+	* [bugfix] #21680 画面に遷移した直後にエラーとなる問題を修正
+	* [bugfix] #21682 画面を遷移してもエラーにならないよう修正
+	* [bugfix] #21690 メイン販売元以外で登録に失敗する件を修正
+	* [bugfix] #21707 管理ユーザは自分自身を削除できないよう修正
+	* [bugfix] #21708 自分自身の販売元を編集した場合はログオフをするよう修正
+	* [bugfix] #21709 メイン販売元以外で店舗管理カテゴリへのアクセスがおかしい件を修正
+	* [bugfix] #21839 エスケープ漏れを修正
+	* [全般] active-formの配布元が変更になったため、READMEを修正
+
+2010-03-25  Taro Matsuzawa  <tmatsuzawa _at_ kbmj.com>
+
+	* 1.0.7 Release
+	* [bugfix] カート周りのviewでTimezoneを使わないように修正
+
+2010-03-23  Taro Matsuzawa  <tmatsuzawa _at_ kbmj.com>
+
+	* 1.0.6 Release
+	* [bugfix] 日付の扱いをTimezoneを使わないようにする
+	* [bugfix] rails 2.3.5で発生するバグを修正
+	* [bugfix] 電話番号の検索時にMySQLで正常に検索できない問題を修正
+	* [bugfix] ログイン処理において、dir_nameがactionを上書きしてしまう問題を修正
+
+2010-03-05  Taro Matsuzawa  <tmatsuzawa _at_ kbmj.com>
+
+	* 1.0.5 Release
+	* [一般画面] Google Analytics Eコマース機能対応
+	* [bugfix] Session Fixation Attacks対策
+	* [bugfix] インストール直後に店舗を登録するとエラーになる問題を修正
+	* [bugfix] Safariでログアウトができない問題を修正
+	* [bugfix] CSVでキャッシュコントロールを明示的に行わないよう修正
+	* [bugfix] 顧客検索時に最終購入日で正しく検索出来ない問題を修正
+	* [全般] MySQL対応コードを一部追加
+
+2010-02-18  Taro Matsuzawa  <tmatsuzawa _at_ kbmj.com>
+
+	* 1.0.4 Release
+	* [管理画面] 仕入先マスタ機能を追加
+	* [管理画面] 在庫管理機能を追加
+	* [管理画面] 返品処理機能を追加
+	* [管理画面] Google Analytics簡単導入機能を追加
+	* [bugfix] #20503 メニュー画像（＋－）表示の修正
+	* [bugfix] モバイルトップページにheaderタグを追加
+	* [bugfix] カテゴリ実装構造を調整
+	* [bugfix] order更新により配送料費用などが再計算されるバグ修正
+	* [一般画面] Mobile Deviceを利用せずに、JPMobileを利用するよう修正
+	* [bugfix] 電話番号最大桁数チェック変更
+	* [bugfix] #20504 GETアクセスがされないようにパンくずリストを削除
+	* [bugfix] 明示的なトランザクションを発生させるように修正
+	* [bugfix] #20505 管理画面より特定商取引法を登録しないと利用者側でエラー
+	* [bugfix] #20506 初回のSHOPマスタ登録時にエラー
+	* [bugfix] 絶対パスに依存しないよう修正(webroarにて動作確認)
+	* [bugfix] HTML Validateが通らない箇所を修正
+	* [一般画面] モバイルで横の大きさを固定にしている箇所を解除
+	* [bugfix] テストケースでいくつか動かなくなっている箇所を修正
+	* [bugfix] CustomerSearchFormで商品コードを検索するとエラーになる件を修正
+	* [bugfix] 商品を更新した際に規格が正しく登録できない問題を修正
+	* [その他] カテゴリのフリースペースが現在使われていないため一般画面から削除
+
+2010-01-06  Taro Matsuzawa  <tmatsuzawa _at_ kbmj.com>
+
+	* 1.0.3 Release
+	* [bugfix] default spellingミスの修正
+	* [bugfix] 管理側で支払方法登録に英語のエラーメッセージが混じっているのを修正
+	* [管理画面] 管理画面ログ画像タグwidth,heigth調整
+	* [一般画面] recommend 人気ranking表示が正しく表示できるよう修正
+	* [管理画面] メールマガジン処理をcronで動かせるように修正
+	* [bugfix] #9, #10, #11, #13, #19, #20, #21, #23, #24, #25
+	* [bugfix] IE8で管理側ログイン画面が表示できない問題を修正
+
+2009-12-15  Taro Matsuzawa  <tmatsuzawa _at_ kbmj.com>
+
+	* 1.0.2 Release
+	* [管理画面]: バグ #17 メルマガの配信内容設定で、本文未入力で確認ボタンを押すとエラーになる
+	* [管理画面]: バグ #8 検索文字に特殊な文字を入れるとエラーになってしまう件に対応
+	* [管理画面]: ロゴが旧ロゴだったので修正
+	* [マスタ]: shopsマスタのymlを修正及びmigrateを追加

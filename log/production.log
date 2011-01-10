@@ -1,0 +1,99 @@
+# Logfile created on Mon Jan 10 22:40:20 +0900 2011 by logger.rb/22285
+  [4;36;1mSQL (16.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (18.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mFunction Load (122.5ms)[0m   [0mSELECT * FROM "functions" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PortalController#show (for ::1 at 2011-01-10 22:40:22) [GET]
+  Parameters: {"action"=>"show", "controller"=>"portal"}
+  [4;35;1mSystem Load (128.5ms)[0m   [0mSELECT * FROM "systems" WHERE (systems.deleted_at IS NULL OR systems.deleted_at > '2011-01-10 22:40:22.893001') LIMIT 1[0m
+  [4;36;1mNewInformation Load (22.8ms)[0m   [0;1mSELECT * FROM "new_informations" WHERE (( date <= '2011-01-10 22:40:23.118732' )) AND (new_informations.deleted_at IS NULL OR new_informations.deleted_at > '2011-01-10 22:40:23.119022') ORDER BY position[0m
+  [4;35;1mRecommendProduct Load Including Associations (49.8ms)[0m   [0mSELECT "recommend_products"."id" AS t0_r0, "recommend_products"."product_id" AS t0_r1, "recommend_products"."position" AS t0_r2, "recommend_products"."description" AS t0_r3, "recommend_products"."created_at" AS t0_r4, "recommend_products"."updated_at" AS t0_r5, "recommend_products"."deleted_at" AS t0_r6, "products"."id" AS t1_r0, "products"."name" AS t1_r1, "products"."permit" AS t1_r2, "products"."no_limit_flag" AS t1_r3, "products"."url" AS t1_r4, "products"."introduction" AS t1_r5, "products"."description" AS t1_r6, "products"."key_word" AS t1_r7, "products"."style_id" AS t1_r8, "products"."price" AS t1_r9, "products"."small_resource_id" AS t1_r10, "products"."medium_resource_id" AS t1_r11, "products"."large_resource_id" AS t1_r12, "products"."sell_limit" AS t1_r13, "products"."point_granted_rate" AS t1_r14, "products"."category_id" AS t1_r15, "products"."size_txt" AS t1_r16, "products"."material" AS t1_r17, "products"."origin_country" AS t1_r18, "products"."weight" AS t1_r19, "products"."arrival_date" AS t1_r20, "products"."other" AS t1_r21, "products"."small_resource_comment" AS t1_r22, "products"."medium_resource_comment" AS t1_r23, "products"."large_resource_comment" AS t1_r24, "products"."free_comment" AS t1_r25, "products"."delivery_dates" AS t1_r26, "products"."have_product_style" AS t1_r27, "products"."sale_start_at" AS t1_r28, "products"."sale_end_at" AS t1_r29, "products"."public_start_at" AS t1_r30, "products"."public_end_at" AS t1_r31, "products"."arrival_expected_date" AS t1_r32, "products"."created_at" AS t1_r33, "products"."updated_at" AS t1_r34, "products"."deleted_at" AS t1_r35, "products"."supplier_id" AS t1_r36, "products"."retailer_id" AS t1_r37 FROM "recommend_products" LEFT OUTER JOIN "products" ON "products".id = "recommend_products".product_id WHERE (products.id >= 1 and recommend_products.description <> '' and products.deleted_at is null) AND (recommend_products.deleted_at IS NULL OR recommend_products.deleted_at > '2011-01-10 22:40:23.143606') ORDER BY recommend_products.position[0m
+  [4;36;1mSeo Load (14.3ms)[0m   [0;1mSELECT * FROM "seos" WHERE ("seos"."page_type" = 0) AND (seos.deleted_at IS NULL OR seos.deleted_at > '2011-01-10 22:40:23.203229') LIMIT 1[0m
+  [4;35;1mStatus Load (1.5ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses"."name" = 'NEW') AND (statuses.deleted_at IS NULL OR statuses.deleted_at > '2011-01-10 22:40:23.221423') LIMIT 1[0m
+  [4;36;1mProduct Load (37.9ms)[0m   [0;1mSELECT "products".* FROM "products" left join product_statuses on product_statuses.product_id = products.id WHERE (( products.permit = 't' ) and ( '2011-01-10 00:00:00' between products.public_start_at and products.public_end_at ) and ( have_product_style = 't' ) and ( product_statuses.status_id = 4 )) AND (products.deleted_at IS NULL OR products.deleted_at > '2011-01-10 22:40:23.226326') ORDER BY id desc LIMIT 8[0m
+  [4;35;1mProductStatus Load (0.5ms)[0m   [0mSELECT "product_statuses".* FROM "product_statuses" WHERE ("product_statuses".product_id = 1) AND (product_statuses.deleted_at IS NULL OR product_statuses.deleted_at > '2011-01-10 22:40:23.280716') ORDER BY position[0m
+  [4;36;1mCategory Load (27.8ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) AND (categories.deleted_at IS NULL OR categories.deleted_at > '2011-01-10 22:40:23.285254') [0m
+  [4;35;1mRecommend Load (0.7ms)[0m   [0mSELECT * FROM "recommends" WHERE (created_at > '2011-01-10 21:40:23.315620' and product_id is null and request_type is null) LIMIT 1[0m
+  [4;36;1mRecommendXml Load (0.7ms)[0m   [0;1mSELECT * FROM "recommend_xmls" WHERE (product_id is null and request_type is null) LIMIT 3[0m
+Rendering template within layouts/base
+Rendering portal/show
+Cached fragment hit: category_idactionshowcontrollerportal (19.4ms)
+Rendered base/_category (21.3ms)
+  [4;35;1mDesign Load (21.0ms)[0m   [0mSELECT * FROM "designs" WHERE (designs.deleted_at IS NULL OR designs.deleted_at > '2011-01-10 22:40:23.394107') LIMIT 1[0m
+Rendered base/_left_sidebar (54.0ms)
+Rendered base/_new_product (8.2ms)
+Rendered base/_recommend_ranking (1.4ms)
+Rendered base/_recommend_product (1.2ms)
+Rendered base/_cart (5.7ms)
+  [4;36;1mDesign Load (0.5ms)[0m   [0;1mSELECT * FROM "designs" WHERE (designs.deleted_at IS NULL OR designs.deleted_at > '2011-01-10 22:40:23.446890') LIMIT 1[0m
+Rendered base/_right_sidebar (19.1ms)
+Completed in 573ms (View: 122, DB: 371) | 200 OK [http://localhost/]
+
+
+Processing JavascriptController#treemenu (for ::1 at 2011-01-10 22:40:24) [GET]
+  Parameters: {"action"=>"treemenu", "controller"=>"javascript"}
+Rendering javascript/treemenu
+Completed in 7ms (View: 2, DB: 122) | 200 OK [http://localhost/js/treemenu.js]
+
+
+Processing ImageResourceController#show (for ::1 at 2011-01-10 22:40:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"image_resource", "width"=>"120"}
+  [4;35;1mSystem Load (2.4ms)[0m   [0mSELECT * FROM "systems" WHERE (systems.deleted_at IS NULL OR systems.deleted_at > '2011-01-10 22:40:24.557031') LIMIT 1[0m
+  [4;36;1mImageResource Load (115.7ms)[0m   [0;1mSELECT * FROM "image_resources" WHERE ("image_resources"."id" = '2') AND (image_resources.deleted_at IS NULL OR image_resources.deleted_at > '2011-01-10 22:40:24.565849') LIMIT 1[0m
+  [4;35;1mResourceData Load (31.1ms)[0m   [0mSELECT * FROM "resource_datas" WHERE ("resource_datas"."resource_id" = 2) LIMIT 1[0m
+Sending data 
+Completed in 162ms (View: 1, DB: 150) | 200 OK [http://localhost/image_resource/show/2/image.jpg?width=120]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mFunction Load (1.7ms)[0m   [0mSELECT * FROM "functions" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PortalController#show (for ::1 at 2011-01-10 22:43:14) [GET]
+  Parameters: {"action"=>"show", "controller"=>"portal"}
+  [4;35;1mSystem Load (2.4ms)[0m   [0mSELECT * FROM "systems" WHERE (systems.deleted_at IS NULL OR systems.deleted_at > '2011-01-10 22:43:14.662560') LIMIT 1[0m
+  [4;36;1mNewInformation Load (1.2ms)[0m   [0;1mSELECT * FROM "new_informations" WHERE (( date <= '2011-01-10 22:43:14.695963' )) AND (new_informations.deleted_at IS NULL OR new_informations.deleted_at > '2011-01-10 22:43:14.696227') ORDER BY position[0m
+  [4;35;1mRecommendProduct Load Including Associations (2.5ms)[0m   [0mSELECT "recommend_products"."id" AS t0_r0, "recommend_products"."product_id" AS t0_r1, "recommend_products"."position" AS t0_r2, "recommend_products"."description" AS t0_r3, "recommend_products"."created_at" AS t0_r4, "recommend_products"."updated_at" AS t0_r5, "recommend_products"."deleted_at" AS t0_r6, "products"."id" AS t1_r0, "products"."name" AS t1_r1, "products"."permit" AS t1_r2, "products"."no_limit_flag" AS t1_r3, "products"."url" AS t1_r4, "products"."introduction" AS t1_r5, "products"."description" AS t1_r6, "products"."key_word" AS t1_r7, "products"."style_id" AS t1_r8, "products"."price" AS t1_r9, "products"."small_resource_id" AS t1_r10, "products"."medium_resource_id" AS t1_r11, "products"."large_resource_id" AS t1_r12, "products"."sell_limit" AS t1_r13, "products"."point_granted_rate" AS t1_r14, "products"."category_id" AS t1_r15, "products"."size_txt" AS t1_r16, "products"."material" AS t1_r17, "products"."origin_country" AS t1_r18, "products"."weight" AS t1_r19, "products"."arrival_date" AS t1_r20, "products"."other" AS t1_r21, "products"."small_resource_comment" AS t1_r22, "products"."medium_resource_comment" AS t1_r23, "products"."large_resource_comment" AS t1_r24, "products"."free_comment" AS t1_r25, "products"."delivery_dates" AS t1_r26, "products"."have_product_style" AS t1_r27, "products"."sale_start_at" AS t1_r28, "products"."sale_end_at" AS t1_r29, "products"."public_start_at" AS t1_r30, "products"."public_end_at" AS t1_r31, "products"."arrival_expected_date" AS t1_r32, "products"."created_at" AS t1_r33, "products"."updated_at" AS t1_r34, "products"."deleted_at" AS t1_r35, "products"."supplier_id" AS t1_r36, "products"."retailer_id" AS t1_r37 FROM "recommend_products" LEFT OUTER JOIN "products" ON "products".id = "recommend_products".product_id WHERE (products.id >= 1 and recommend_products.description <> '' and products.deleted_at is null) AND (recommend_products.deleted_at IS NULL OR recommend_products.deleted_at > '2011-01-10 22:43:14.699505') ORDER BY recommend_products.position[0m
+  [4;36;1mSeo Load (0.8ms)[0m   [0;1mSELECT * FROM "seos" WHERE ("seos"."page_type" = 0) AND (seos.deleted_at IS NULL OR seos.deleted_at > '2011-01-10 22:43:14.711562') LIMIT 1[0m
+  [4;35;1mStatus Load (0.8ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses"."name" = 'NEW') AND (statuses.deleted_at IS NULL OR statuses.deleted_at > '2011-01-10 22:43:14.715496') LIMIT 1[0m
+  [4;36;1mProduct Load (1.5ms)[0m   [0;1mSELECT "products".* FROM "products" left join product_statuses on product_statuses.product_id = products.id WHERE (( products.permit = 't' ) and ( '2011-01-10 00:00:00' between products.public_start_at and products.public_end_at ) and ( have_product_style = 't' ) and ( product_statuses.status_id = 4 )) AND (products.deleted_at IS NULL OR products.deleted_at > '2011-01-10 22:43:14.719297') ORDER BY id desc LIMIT 8[0m
+  [4;35;1mProductStatus Load (0.5ms)[0m   [0mSELECT "product_statuses".* FROM "product_statuses" WHERE ("product_statuses".product_id = 1) AND (product_statuses.deleted_at IS NULL OR product_statuses.deleted_at > '2011-01-10 22:43:14.736028') ORDER BY position[0m
+  [4;36;1mCategory Load (0.9ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) AND (categories.deleted_at IS NULL OR categories.deleted_at > '2011-01-10 22:43:14.740864') [0m
+  [4;35;1mRecommend Load (0.7ms)[0m   [0mSELECT * FROM "recommends" WHERE (created_at > '2011-01-10 21:43:14.743696' and product_id is null and request_type is null) LIMIT 1[0m
+  [4;36;1mRecommendXml Load (0.6ms)[0m   [0;1mSELECT * FROM "recommend_xmls" WHERE (product_id is null and request_type is null) LIMIT 3[0m
+Rendering template within layouts/base
+Rendering portal/show
+Cached fragment hit: category_idactionshowcontrollerportal (1.7ms)
+Rendered base/_category (3.4ms)
+  [4;35;1mDesign Load (0.7ms)[0m   [0mSELECT * FROM "designs" WHERE (designs.deleted_at IS NULL OR designs.deleted_at > '2011-01-10 22:43:14.767035') LIMIT 1[0m
+Rendered base/_left_sidebar (15.0ms)
+Rendered base/_new_product (5.9ms)
+Rendered base/_recommend_ranking (1.4ms)
+Rendered base/_recommend_product (1.2ms)
+Rendered base/_cart (5.3ms)
+  [4;36;1mDesign Load (0.5ms)[0m   [0;1mSELECT * FROM "designs" WHERE (designs.deleted_at IS NULL OR designs.deleted_at > '2011-01-10 22:43:14.795471') LIMIT 1[0m
+Rendered base/_right_sidebar (17.9ms)
+Completed in 150ms (View: 60, DB: 15) | 200 OK [http://localhost/]
+
+
+Processing JavascriptController#treemenu (for ::1 at 2011-01-10 22:43:14) [GET]
+  Parameters: {"action"=>"treemenu", "controller"=>"javascript"}
+Rendering javascript/treemenu
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/js/treemenu.js]
+
+
+Processing ImageResourceController#show (for ::1 at 2011-01-10 22:43:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"image_resource", "width"=>"120"}
+  [4;35;1mSystem Load (4.6ms)[0m   [0mSELECT * FROM "systems" WHERE (systems.deleted_at IS NULL OR systems.deleted_at > '2011-01-10 22:43:14.890642') LIMIT 1[0m
+  [4;36;1mImageResource Load (2.3ms)[0m   [0;1mSELECT * FROM "image_resources" WHERE ("image_resources"."id" = '2') AND (image_resources.deleted_at IS NULL OR image_resources.deleted_at > '2011-01-10 22:43:14.910242') LIMIT 1[0m
+  [4;35;1mResourceData Load (1.8ms)[0m   [0mSELECT * FROM "resource_datas" WHERE ("resource_datas"."resource_id" = 2) LIMIT 1[0m
+Sending data 
+Completed in 35ms (View: 1, DB: 10) | 200 OK [http://localhost/image_resource/show/2/image.jpg?width=120]
