@@ -1,6 +1,6 @@
 common: &common
   adapter: postgresql
-  username: postgres
+  username: 
   password: 
   host: localhost
   port: 5432
