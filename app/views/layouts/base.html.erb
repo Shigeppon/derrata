@@ -14,6 +14,7 @@
 <%= javascript_include_tag 'sorry' %>
 <%= javascript_include_tag js_url(:action => "treemenu") %>
 <%= javascript_include_tag 'rollover' %>
+<%= javascript_include_tag 'login' %>
 <%= stylesheet_link_tag "front/common" %>
 <%= yield :head -%>
 </head>
@@ -21,21 +22,39 @@
 <body>
 <div id="wrapper" class="clearfix">
   <div id="header" class="clearfix"><!-- ヘッダー -->
-    <h1><%= link_to image_tag("common/logo.gif", :width => "133", :height => "37", :alt => "K&amp;Bstyle"), :controller => :portal, :action => :show %></h1>
+    <h1><%= link_to image_tag("common/top_logo_01.gif", :width => "133", :height => "37", :alt => "K&amp;Bstyle"), :controller => :portal, :action => :show %></h1>
+    <!--
   <div id="store_desc"><span>オリーブオイル専門サイト</span></div>
+  -->
   <div id="my_menubox" class="clearfix">
-  <%- if @login_customer %>
-  <p>
-  <span><%="#{h @login_customer.full_name}&nbsp;様" if @login_customer %></span>
-  <span id="log"><%= link_to 'ログアウト', :controller => :accounts, :action => :logout if @login_customer %></span>
-  </p>
-  <ul id="my_menu" class="clearfix">
-    <li><%= link_to image_tag("/images/common/mypage_btn.gif", :width=>"101", :height=>"28", :alt=>"マイページ", :class=>"hoverImg"), :controller => :accounts, :action => :history_list if @login_customer %></li>
-  </ul>
+    <ul>
+      <li>
+      <%- if @login_customer %>
+        <span id="log" class="navgreeting"><%="こんにちは、#{h @login_customer.full_name}さん。" if @login_customer %></span>
+        <span id="log">本人でない場合は<%= link_to 'こちら', :controller => :accounts, :action => :logout if @login_customer %>。</span>
+      <%- else%>    
+        <span id="log"><%= link_to 'ログイン/新規登録', :controller => :accounts, :action => :login %></span>
+      <%- end %>
+      </li>
+      <li>
+        <ul id="my_menu" class="clearfix">
+          <li>
+    <!--商品検索ボックス-->
+    <% form_tag({:controller=>:products, :action=>:search, :only_path=>false}, {:method=>"get", :id=>'search-form'}) do %>
+      <%= text_field_tag "search", params[:search], :size=>21, :id=>'area', :title=>'商品検索', :class=>"search_box" %>
+      <%= image_submit_tag "/images/common/search_btn.gif", :alt=>"検索", :class=>"search_btn hoverImg" %>
+    <% end %>
+          </li>
+      <%- if @login_customer %>
+          <li><%= link_to image_tag("/images/common/mypage_btn.gif", :width=>"101", :height=>"28", :alt=>"マイページ", :class=>"hoverImg"), :controller => :accounts, :action => :history_list if @login_customer %></li>
+    <!-- カート -->
+          <li><%= render :partial => "/base/cart" %></li>
+        </ul>
+      </li>
   <%- end %>
+    </ul>
   </div><!-- /my_menubox -->
   </div><!-- /header -->
-
   <div id="container" class="clearfix">
     <%= yield %>
   </div><!-- /container -->

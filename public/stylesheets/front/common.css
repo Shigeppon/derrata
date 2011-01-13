@@ -113,13 +113,15 @@ body > #wrapper {
   width: 970px;
   height: 70px;
   margin-bottom: 10px;
+  /*
   background: url("../../images/common/header_bg.jpg") no-repeat;
+  */
 }
 
 #header h1 {
   width: 160px;
   float: left;
-  padding: 20px 0 0 30px;
+  padding: 5px 0 0 5px;
 }
 
 #store_desc {
@@ -137,27 +139,32 @@ body > #wrapper {
 
 #my_menubox {
   float: right;
-  width: 238px;
-  height: 55px;
-  padding-top: 15px;
+  width: 800px;
+  height: 37px;
+  padding-top: 5px;
 }
 
-#my_menubox p {
-  height: 14px;
+#my_menubox {
+  float: left;
 }
 
 #log {
-  margin-left: 20px;
+  margin-left: 0px;
+}
+
+.navgreeting {
+  color: #E47911;
+  font-weight: bold
 }
 
 #my_menu {
-  float: right;
+  margin-left: 0px;
   margin-top: 5px;
 }
 
 #my_menu li {
   float: left;
-  margin-right: 15px;
+  margin-left: 5px;
 }
 
 /*------column------*/
@@ -250,9 +257,9 @@ body > #wrapper {
 }
 
 .search_box {
-  width: 120px;
+  width: 200px;
   height: 20px;
-  margin: 10px 0 5px 10px;
+  margin: 5px 0 5px 0px;
   border: 1px solid #999999;
   vertical-align: bottom;
 }

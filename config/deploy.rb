@@ -21,7 +21,7 @@ namespace(:deploy) do
   task :link_images do
     run <<-CMD
       cd #{release_path} &&
-      ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml
+      ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml &&
       ln -nfs #{shared_path}/test/fixtures/admin_users.yml #{release_path}/test/fixtures/admin_users.yml
     CMD
   end

@@ -39,7 +39,7 @@ describe Cart do
       #キャンペーン期間以外
       campaign = @cart.product_style.product.campaign
       campaign.opened_at = DateTime.new(2008, 1, 1)
-      campaign.closed_at = DateTime.new(2008, 12, 1)
+      campaign.closed_at = DateTime.new(2011, 12, 1)
       @cart.should_not be_valid      
     end
     #未公開商品
