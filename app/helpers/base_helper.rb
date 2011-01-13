@@ -183,8 +183,9 @@ EJS
 
   def image_field(*args)
     return_str = ""
-    return_str = send(:file_field, *args)
-    return_str += "<br>"
+    return_str += "<br/>"
+    return_str += send(:file_field, *args)
+    return_str += "<br/>"
     object_name, method_name = args[0].to_s.dup, args[1].to_s.dup
     object = self.instance_variable_get("@#{object_name}")
     resource_id = object.send "#{method_name}_id"

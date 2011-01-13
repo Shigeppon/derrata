@@ -22,7 +22,7 @@
 <body>
 <div id="wrapper" class="clearfix">
   <div id="header" class="clearfix"><!-- ヘッダー -->
-    <h1><%= link_to image_tag("common/top_logo_01.gif", :width => "133", :height => "37", :alt => "K&amp;Bstyle"), :controller => :portal, :action => :show %></h1>
+    <h1><%= link_to image_tag("common/top_logo_03.png", :width => "200", :height => "55", :alt => "Derrata"), :controller => :portal, :action => :show %></h1>
     <!--
   <div id="store_desc"><span>オリーブオイル専門サイト</span></div>
   -->
@@ -42,11 +42,11 @@
     <!--商品検索ボックス-->
     <% form_tag({:controller=>:products, :action=>:search, :only_path=>false}, {:method=>"get", :id=>'search-form'}) do %>
       <%= text_field_tag "search", params[:search], :size=>21, :id=>'area', :title=>'商品検索', :class=>"search_box" %>
-      <%= image_submit_tag "/images/common/search_btn.gif", :alt=>"検索", :class=>"search_btn hoverImg" %>
+      <%= image_submit_tag "/images/common/search_btn_02.gif", :alt=>"検索", :class=>"search_btn hoverImg" %>
     <% end %>
           </li>
       <%- if @login_customer %>
-          <li><%= link_to image_tag("/images/common/mypage_btn.gif", :width=>"101", :height=>"28", :alt=>"マイページ", :class=>"hoverImg"), :controller => :accounts, :action => :history_list if @login_customer %></li>
+          <li><%= link_to image_tag("/images/common/mypage_btn_02.gif", :width=>"100", :height=>"21", :alt=>"マイページ", :class=>"hoverImg"), :controller => :accounts, :action => :history_list if @login_customer %></li>
     <!-- カート -->
           <li><%= render :partial => "/base/cart" %></li>
         </ul>

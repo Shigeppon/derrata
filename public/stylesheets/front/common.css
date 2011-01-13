@@ -93,7 +93,7 @@ html>/**/body {
   border-right: 1px solid #a7a696;
   border-left: 1px solid #a7a696;
   margin: 0 auto;
-  padding: 10px 10px 88px;
+  padding: 3px 3px 88px;
 }
 
 body > #wrapper {
@@ -111,17 +111,17 @@ body > #wrapper {
 /*-----------header-----------*/
 #header {
   width: 970px;
-  height: 70px;
-  margin-bottom: 10px;
+  height: 55px;
+  margin-bottom: 0px;
   /*
   background: url("../../images/common/header_bg.jpg") no-repeat;
   */
 }
 
 #header h1 {
-  width: 160px;
+  width: 200px;
   float: left;
-  padding: 5px 0 0 5px;
+  padding: 0 0 0 5px;
 }
 
 #store_desc {
@@ -139,9 +139,9 @@ body > #wrapper {
 
 #my_menubox {
   float: right;
-  width: 800px;
-  height: 37px;
-  padding-top: 5px;
+  width: 760px;
+  height: 55px;
+  padding-top: 0px;
 }
 
 #my_menubox {
@@ -149,7 +149,7 @@ body > #wrapper {
 }
 
 #log {
-  margin-left: 0px;
+  margin-left: 5px;
 }
 
 .navgreeting {
@@ -165,8 +165,12 @@ body > #wrapper {
 #my_menu li {
   float: left;
   margin-left: 5px;
+  padding: 20 0 0 0px;
 }
 
+.hoverImg {
+  margin-top: 7px;
+}
 /*------column------*/
 #left_box {
   float: left;
