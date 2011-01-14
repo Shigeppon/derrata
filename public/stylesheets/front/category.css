@@ -6,7 +6,7 @@
 
 /*----Category Search----*/
 #main_search {
-  padding: 7px 20px;
+  padding: 2px 20px;
 }
 
 #main_search dl {
@@ -16,7 +16,7 @@
 #main_search dt {
   float: left;
   width: 100px;
-  padding: 8px 0;
+  padding: 5px 0;
 }
 
 #main_search dd {
@@ -28,7 +28,7 @@
 #main_search li {
   float: left;
   margin-right: 5px;
-  padding: 1px 5px 0 0;
+  padding: 0px 5px 0 0;
   border-right: 1px solid #222222;
 }
 
