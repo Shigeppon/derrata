@@ -103,10 +103,11 @@ body > #wrapper {
 }
 
 #container {
+  float: none;
   width: 970px;
+  padding: 80px 0px 0px 0;
   #background: #ffffff url("../../images/common/container_bg.gif") repeat-y left 0;
   #margin-left: 5px;
-  #padding: 0 10px 10px 0;
 }
 
 /*-----------header-----------*/
@@ -140,7 +141,7 @@ body > #wrapper {
 }
 
 #my_menubox {
-  width: 970px;
+  width: 770px;
   height: 80px;
   margin-left: 0px;
   padding-left: 200px;
@@ -198,22 +199,24 @@ body > #wrapper {
 
 #main {
   float: left;
-  width: 530px;
+  width: 550px;
   margin: 0 0 0 5px;
 }
 
-ul.letterBanner {
+.letterBanner {
   margin-top: 10px;
   width: 970px;
   height: 41px;
   background-color: #D9EEFA;
+  background-position: 0px -866px;
+  clear: left;
   color: #27527F;
-}
-
-ul.letterBanner li{
-  float: left;
-  margin-left:25px;
+  margin-left:11px;
+  margin-right:11px;
   font: normal normal normal 18px/2.3em georgia, times, 'times new roman', serif;
+  list-style: none;
+  padding: 1px 0px 1px 50px;
+  float: left;
 }
 
 #r_sub {
@@ -234,14 +237,15 @@ ul.letterBanner li{
   margin-left: -20px;
 }
 .main_t {
-  width: 485px;
+  width: 530px;
   height: 21px;
   margin-bottom:  0px;
   padding-left: 10px;
   font-size: 130%;
   font-weight: none;
-  background: url(../../images/common/title_bg.gif) no-repeat;
+  background: url(../../images/common/title_bg_01.gif) no-repeat;
   line-height: 21px;
+  color: #FFFFFF;
 }
 
 /*------left side column------*/

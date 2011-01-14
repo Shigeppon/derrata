@@ -2,7 +2,7 @@
 
 #container {
   background: url();
-  width: 735px;
+  width: 970;
   margin: 0 auto;
 }
 
@@ -12,7 +12,9 @@
 }
 
 #cart {
-  width: 715px;
+  float: left;
+  width: 970;
+  padding-left: 30px;
   margin: 0 auto;
 }
 

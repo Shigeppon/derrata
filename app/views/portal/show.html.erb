@@ -2,12 +2,15 @@
   <%= stylesheet_link_tag "front/top" %>
 <% end %>
 
-<div id="left_box" class="clearfix">
+  <div id="top_banner">
 <!--
-  <div id="top_img">
     <%= image_tag("common/top_img.jpg", :width => "740", :height => "200", :alt => "カジュアルアイテム在庫一掃セール") %>
 -->
   </div>
+<!--
+<div id="left_box" class="clearfix">
+</div>
+-->
   <%= render :partial => '/base/left_sidebar' %>
   <div id="main"><!-- メイン -->
 
@@ -18,8 +21,7 @@
     <!-- オススメアイテム -->
     <%= render :partial => '/base/recommend_product' %>
   </div><!-- メイン -->
-</div>
-<%= render :partial => '/base/right_sidebar' %>
+  <%= render :partial => '/base/right_sidebar' %>
 <ul class="letterBanner">
   <li>Free Shipping</li>
   <li>Free Returns</li>

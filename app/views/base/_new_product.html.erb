@@ -6,6 +6,7 @@
       <li class="clearfix">
         <%= link_to((product_image_tag(new_product, :small)), {:controller => "/products", :action => "show", :id => (new_product.id),:category_id => new_product.category_id}) %>
         <p><%= link_to_product new_product -%></p>
+        <p>価格：<%= new_product.price_label -%>円</p>
       </li>
     <%- end -%>
   </ul>

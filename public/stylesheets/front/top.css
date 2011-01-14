@@ -1,13 +1,13 @@
 @charset "utf-8";
 
 /*--トップ・ヘッダーイメージ--*/
-#top_img {
-  width: 730px;
-  padding: 0 0 10px 10px;
-  margin-left: -10px;
-  zoom: 1;
+#top_banner {
+  width: 970px;
+  padding: 0 0 0px 0px;
+  margin-left: 0px;
+  #zoom: 1;
   position: relative;
-  background-color: #ffffff;
+  #background-color: #ffffff;
 }
 
 /*---------共通要素---------*/
