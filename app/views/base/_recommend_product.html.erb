@@ -1,5 +1,5 @@
 <%- unless @recommend_products.blank? -%>
-<h2><%= image_tag "/images/top/reco_item_t_01.gif", :size => "530x21", :alt => "オススメ商品" %></h2>
+<h2><%= image_tag "/images/top/reco_item_t_01.png", :size => "550x21", :alt => "オススメ商品" %></h2>
 <div id="reco_item" class="clearfix">
   <ul class="clearfix">
     <%- @recommend_products.each do | recommend_product | -%>
@@ -7,11 +7,12 @@
       <%= link_to((product_image_tag(recommend_product.product, :small)), {:controller => "/products", :action => "show", :id => (recommend_product.product_id),:category_id => recommend_product.product.category_id}) %>
       <dl>
         <dt><%= link_to_product recommend_product.product -%></dt>
+        <dt>価格：<%= recommend_product.product.price_label -%>円</dt>
         <dd><%=h recommend_product.description -%></dd>
       </dl>
       </li>
     <%- end -%>
   </ul>
 </div>
-<div><%= image_tag "/images/top/top_bg_btm.gif", :size => "530x5", :alt => "" %></div>
+<div><%= image_tag "/images/top/top_bg_btm_01.png", :size => "550x5", :alt => "" %></div>
 <%- end -%>

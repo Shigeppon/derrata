@@ -205,18 +205,21 @@ body > #wrapper {
 
 .letterBanner {
   margin-top: 10px;
-  width: 970px;
-  height: 41px;
+  width: 950px;
   background-color: #D9EEFA;
-  background-position: 0px -866px;
   clear: left;
   color: #27527F;
-  margin-left:11px;
-  margin-right:11px;
   font: normal normal normal 18px/2.3em georgia, times, 'times new roman', serif;
   list-style: none;
-  padding: 1px 0px 1px 50px;
+  padding: 10px 10px 10px 10px;
   float: left;
+}
+
+.letterBanner li {
+  display: inline;
+  float: left;
+  margin-left: 25px;
+  white-space: nowrap;
 }
 
 #r_sub {
@@ -237,13 +240,13 @@ body > #wrapper {
   margin-left: -20px;
 }
 .main_t {
-  width: 530px;
+  width: 550px;
   height: 21px;
   margin-bottom:  0px;
   padding-left: 10px;
   font-size: 130%;
   font-weight: none;
-  background: url(../../images/common/title_bg_01.gif) no-repeat;
+  background: url(../../images/common/title_bg_01.png) no-repeat;
   line-height: 21px;
   color: #FFFFFF;
 }
@@ -266,9 +269,8 @@ body > #wrapper {
 }
 
 #h3_info {
-  margin-top: 10px;
   width: 200px;
-  height: 32px;
+  height: 21;
 }
 
 .banner li {
@@ -373,7 +375,7 @@ body > #wrapper {
 }
 
 /*----------information----------*/
-#info_box li {
+#info_box .top {
   padding: 3px 0 3px 15px;
   background: url("../../images/common/list_pink.gif") no-repeat 0 6px;
   line-height: 120%;

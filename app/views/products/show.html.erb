@@ -9,7 +9,9 @@
   <%= javascript_include_tag js_url(:action => "application") %>
 <% end %>
 
+<!--
 <div id="left_box" class="clearfix">
+-->
   <%= render :partial => '/base/left_sidebar' %>
 
   <!-- メイン -->
@@ -18,7 +20,7 @@
   <ol id="bread_list" class="m_btm"><li class="bread_top"><%= link_to "トップページ", :controller => :portal, :action => :show %></li><li><%= link_to("商品一覧", { :controller => "/products", :action => "index"}) %></li><li><%= @product.name %></li></ol>
 
   <!-- 商品詳細 -->
-  <div><%= image_tag("common/box_bg_top.gif", :width => "530", :height => "5", :alt => "") %></div>
+  <div><%= image_tag("common/box_bg_top.gif", :width => "550", :height => "5", :alt => "") %></div>
   <div id="item_box" class="main_box">
   <div id="item_box_top" class="clearfix">
     <div class="item_pic">
@@ -37,7 +39,7 @@
     <dl>
       <dt><%=@product.url.blank? ? h( @product.name ) : link_to(@product.name, @product.url) %></dt>
       <dd>価格：<%=h @product.price_label %>円</dd>
-      <dd>販売期間：<%=h print_date(@product.sale_start_at) %> ～ <%=h print_date(@product.sale_end_at) %></dd>
+      <dd>販売期間：<%=h print_date(@product.sale_start_at,"%Y/%m/%d") %> ～ <%=h print_date(@product.sale_end_at,"%Y/%m/%d") %></dd>
             <% if @product.product_styles && @product.product_styles.detect(nil){ |p_s| p_s.orderable_count.to_i > 0} -%>
               <%- unless @product.delivery_dates_label.blank? %>
               <dd>お届け：<%= @product.delivery_dates_label %></dd>
@@ -97,12 +99,14 @@
   </p>
 
   </div><!-- /item_box -->
-  <div class="m_btm"><%= image_tag("common/box_bg_btm.gif", :width => "530", :height => "5", :alt => "") %></div>
+  <div class="m_btm"><%= image_tag("common/box_bg_btm.gif", :width => "550", :height => "5", :alt => "") %></div>
 
   <div id="under_line"></div>
   <% @reco_no = 0 %>
   <%= render :partial => '/base/recommend_asp', :locals => {:size=>4} %>
 
   </div><!-- /main -->
+<!--
 </div>
+-->
 <%= render :partial => '/base/right_sidebar' %>

@@ -6,7 +6,7 @@
 }
 
 .main_box {
-  background: url(../../images/common/box_bg.gif) repeat-y;
+  background: url(../../images/common/box_bg.png) repeat-y;
 }
 
 /*------商品詳細-------*/
@@ -25,7 +25,7 @@
 }
 
 .item_data {
-  padding-left: 310px;
+  #padding-left: 310px;
 }
 
 .item_data dt {
@@ -94,6 +94,7 @@
 }
 
 #item_box_top {
+  width: 530px;
   margin-bottom: 10px;
 }
 

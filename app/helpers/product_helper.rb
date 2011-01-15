@@ -11,8 +11,8 @@ module ProductHelper
     order == "price" ? "価格順" : "新着順"
   end
 
-  def print_date(date)
-    date.strftime("%Y年%m月%d日")
+  def print_date(date,format="%Y年%m月%d日")
+    date.strftime(format)
   end
 
   def paginate_item_count(current_page, per_page, total)
