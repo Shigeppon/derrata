@@ -10,7 +10,7 @@
 
   <!-- 購入履歴一覧 -->
   <div id="mypage_main">
-    <h3><%= image_tag("mypage/mypage_t1.gif", :width => "535", :height => "44", :alt => "購入履歴一覧") %></h3>
+    <h3><%= image_tag("mypage/mypage_t1.gif", :width => "770", :height => "44", :alt => "購入履歴一覧") %></h3>
     <div class="mypage_box">
     <% if @orders && !@orders.empty? %>
       <div class="clearfix"><p class="history"><%= @orders.size %> 件の購入履歴があります。</p><p class="point_right">現在のポイント<%= @login_customer.point.to_i %>pt</p></div>
@@ -39,6 +39,6 @@
     <% end %>
   </div><!-- /購入履歴一覧 -->
 
-  <div><%= image_tag("mypage/mypage_btm.gif", :width => "535", :height => "5", :alt => "") %></div>
+  <div><%= image_tag("mypage/mypage_btm.gif", :width => "770", :height => "5", :alt => "") %></div>
   </div><!-- /mypage_main -->
 </div><!-- /mypage -->

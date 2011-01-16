@@ -2,26 +2,27 @@
 
 #container {
   background: url();
-  width: 970;
+  width: 970px;
   margin: 0 auto;
 }
 
 .main_t {
-  width: 690px;
+  width: 970px;
   background: url(../../images/common/main_t_l.gif) no-repeat;
 }
 
 #cart {
   float: left;
-  width: 970;
-  padding-left: 30px;
+  width: 842px;
+  padding-left: 128px;
   margin: 0 auto;
+  background: #ffffff url("../../images/login/login_bg.gif") repeat-y left 0;
 }
 
 .route {
   display: block;
   width: 583px;
-  margin: 10px auto 20px;
+  margin: 10px auto 10px 65px;
 }
 
 .error_mes {
@@ -32,9 +33,16 @@
   color: #ff0000;
 }
 
+#entry {
+  width: 940px;
+  padding-left: 30px;
+  margin: 0 auto;
+  background: #ffffff url("../../images/login/login_bg.gif") repeat-y left 0;
+}
+
 .cart_btn {
   width: 300px;
-  margin: 0 auto;
+  margin: 0 auto 0 220px;
 }
 
 #caption {
@@ -125,7 +133,12 @@
 }
 
 .m_top {
-  margin-top: 10px
+  padding-top: 10px;
+  margin-top: 0px
+}
+
+.my_btn2 {
+  height: 30px;
 }
 
 /*---complete---*/

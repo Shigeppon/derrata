@@ -1,5 +1,5 @@
 <%- unless @recommend_products.blank? -%>
-<h2><%= image_tag "/images/top/reco_item_t_01.png", :size => "550x21", :alt => "オススメ商品" %></h2>
+<h2><%= image_tag "/images/top/reco_item_t.gif", :size => "550x21", :alt => "オススメ商品" %></h2>
 <div id="reco_item" class="clearfix">
   <ul class="clearfix">
     <%- @recommend_products.each do | recommend_product | -%>
@@ -14,5 +14,5 @@
     <%- end -%>
   </ul>
 </div>
-<div><%= image_tag "/images/top/top_bg_btm_01.png", :size => "550x5", :alt => "" %></div>
+<div><%= image_tag "/images/top/top_bg_btm.gif", :size => "550x5", :alt => "" %></div>
 <%- end -%>

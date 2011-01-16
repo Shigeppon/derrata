@@ -5,6 +5,7 @@
 <ol id="bread_list" class="m_btm"><li class="bread_top"><%= link_to "トップページ", :controller => :portal, :action => :show %></li><li><%= link_to "利用規約", :controller => :accounts, :action => :kiyaku %></li><li>会員登録</li></ol>
 <h2 class="main_t">会員登録</h2>
 <div id="entry">
+  <div id="account_input">
   <p class="tb_desc">
     会員情報をご送信いただくと、お客さまにメールが届きます。<br />
     メールに記載のURLにアクセスしていただき会員登録の手続きが完了となります。
@@ -17,4 +18,6 @@
       <%= render :partial => "form", :locals => {:f => f} %>
     <% end %>
   </div>
+  </div> <!-- /account_input -->
 </div>
+<div><%= image_tag("login/login_bg_btm.gif", :width => "970", :height => "5", :alt => "") %></div>

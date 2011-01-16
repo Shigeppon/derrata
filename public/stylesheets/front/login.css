@@ -2,12 +2,12 @@
 
 #container {
   background: url();
-  width: 735px;
+  width: 970px;
   margin: 0 auto;
 }
 
 .main_t {
-  width: 690px;
+  width: 970px;
   background: url(../../images/common/main_t_l.gif) no-repeat;
 }
 
@@ -53,6 +53,12 @@
 
 #join p {
   line-height: 130%;
+}
+
+#entry {
+  width: 970px;
+  margin: 0 auto;
+  background: #ffffff url("../../images/login/login_bg.gif") repeat-y left 0;
 }
 
 .new_entry_btn {

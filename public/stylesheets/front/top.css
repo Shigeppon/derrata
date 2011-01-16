@@ -31,9 +31,9 @@ h2.clearfix span.more {
 /*-------新着アイテム-------*/
 #new_item {
   width: 550px;
-  padding: 0 0 0 1px;
+  padding: 0 0 0 0px;
   margin: 0 0 0 0px;
-  background: url(../../images/top/top_bg_01.png) repeat-y;
+  background: url(../../images/top/top_bg.gif) repeat-y;
 }
 
 #new_item li {
@@ -129,7 +129,7 @@ h2.clearfix span.more {
 /*-----おすすめアイテム-----*/
 #reco_item {
   width: 550px;
-  background: url(../../images/top/top_bg_01.png) repeat-y;
+  background: url(../../images/top/top_bg.gif) repeat-y;
 }
 
 #reco_item li {

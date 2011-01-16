@@ -9,13 +9,13 @@
   <%= render :partial=> "user/navigation" %>
   <!-- 会員登録内容変更 -->
   <div id="mypage_main">
-    <h3><%= image_tag("mypage/mypage_t2.gif", :width => "535", :height => "44", :alt => "会員登録内容変更") %></h3>
+    <h3><%= image_tag("mypage/mypage_t2.gif", :width => "770", :height => "44", :alt => "会員登録内容変更") %></h3>
     <div class="mypage_box">
       <%= error_messages_for :customer %>
       <% form_for :customer, :url => {:action => 'edit_confirm'} do |f| %>
         <%= render :partial => "form", :locals => {:f => f} %>
       <% end %>
     </div>
-    <div><%= image_tag("mypage/mypage_btm.gif", :width => "535", :height => "5", :alt => "") %></div>
+    <div><%= image_tag("mypage/mypage_btm.gif", :width => "770", :height => "5", :alt => "") %></div>
   </div><!-- /mypage_main -->
 </div><!-- /mypage -->

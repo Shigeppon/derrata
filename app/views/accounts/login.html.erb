@@ -5,6 +5,7 @@
 
 <ol id="bread_list" class="m_btm"><li class="bread_top"><%= link_to "トップページ", :controller => :portal, :action => :show %></li><li>ログイン</li></ol>
 <h2 class="main_t">ログイン</h2>
+<div id="entry">
 <p class="notice"><%=h flash[:notice] %></p>
 <div id="login_area">
   <!-- 会員の方 -->
@@ -35,3 +36,5 @@
 </div><!-- /login_area -->
 <p class="cntr">会員登録をしないで商品を購入される方は、こちらより購入手続きが行えます。</p>
     <%= link_to image_tag("/images/common/purchase_btn.gif", :width=>"143", :height=>"30", :alt=>"購入手続きへ", :class => "cart_btn"), {:controller => "cart",:action=> "temporary_shipping"} %>
+</div><!-- /entry -->
+<div><%= image_tag("login/login_bg_btm.gif", :width => "970", :height => "5", :alt => "") %></div>

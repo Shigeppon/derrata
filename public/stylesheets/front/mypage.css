@@ -7,17 +7,17 @@
 }
 
 .main_t {
-  width: 690px;
+  width: 970px;
   background: url(../../images/common/main_t_l.gif) no-repeat;
 }
 
 #mypage {
-  width: 970;
+  width: 970px;
   margin: 0 auto;
 }
 
 #mymenu {
-  width: 170px;
+  width: 200px;
   float: left;
   font-size: 0;
 }
@@ -28,7 +28,7 @@
 }
 
 .mypage_box {
-  width: 515px;
+  width: 750px;
   padding: 1px 10px 10px;
   background: url(../../images/mypage/mypage_bg.gif) repeat-y;
 }

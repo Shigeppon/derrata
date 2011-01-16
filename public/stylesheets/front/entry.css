@@ -2,18 +2,29 @@
 
 #container {
   background: url();
-  width: 735px;
+  width: 970;
   margin: 0 auto;
 }
 
 .main_t {
-  width: 690px;
+  width: 970px;
   background: url(../../images/common/main_t_l.gif) no-repeat;
 }
 
 #entry {
-  width: 715px;
+  width: 970px;
   margin: 0 auto;
+  background: #ffffff url("../../images/login/login_bg.gif") repeat-y left 0;
+}
+
+#account_input {
+  width: 940px;
+  padding-left: 30px;
+
+}
+
+.entry_btn {
+  height:30px;
 }
 
 .agreement_t {
@@ -121,4 +132,5 @@
 #entry .my_btn input,
 #entry .my_btn2 input {
   border: none;
+  height: 30px;
 }
