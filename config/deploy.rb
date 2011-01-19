@@ -11,7 +11,7 @@ role :app, "derrata.me"                          # This may be the same as your 
 #role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
 #role :db,  "your slave db-server here"
 
-set :deploy_to, "/home/shigeo/#{application}"
+set :deploy_to, "/home/#{application}"
 
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need

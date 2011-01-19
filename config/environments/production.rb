@@ -2,8 +2,7 @@
 
 # The production environment is meant for finished, "live" apps.
 # Code is not reloaded between requests
-#config.cache_classes = true
-config.cache_classes = false
+config.cache_classes = true
 
 # Use a different logger for distributed setups
 # config.logger = SyslogLogger.new
@@ -33,5 +32,5 @@ ActionMailer::Base.smtp_settings = {
 }
 ActionMailer::Base.default_charset = 'iso-2022-jp'
  
-config.log_level = :debug
+config.log_level = :info
 
