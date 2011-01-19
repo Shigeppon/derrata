@@ -1,16 +1,17 @@
 set :application, "derrata"
-set :user, "derrata"
+set :user, "shigeo"
+ssh_options[:keys] = %w(home/#{user}/.ssh/id_rsa)
 set :repository,  "git://github.com/Shigeppon/derrata.git"
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 #role :web, "your web-server here"                          # Your HTTP server, Apache/etc
-role :app, "183.181.175.0"                          # This may be the same as your `Web` server
+role :app, "derrata.me"                          # This may be the same as your `Web` server
 #role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
 #role :db,  "your slave db-server here"
 
-set :deploy_to, "/home/#{application}"
+set :deploy_to, "/home/shigeo/#{application}"
 
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need
