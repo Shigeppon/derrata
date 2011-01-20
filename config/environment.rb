@@ -79,3 +79,40 @@ class UnsupportedDeviceLinkRenderer < WillPaginate::LinkRenderer
 #    @template.content_tag :span, text, {}
   end  
 end
+
+# 複数の Ruby インスタンスがひとつのログファイルを共有している状況で、
+# 安全にログローテーションを実現する。
+require 'fileutils'
+
+class Logger::LogDevice
+
+  def shift_log_age_with_safe_log_rotation
+    (@shift_age-3).downto(0) do |i|
+      if FileTest.exist?("#{@filename}.#{i}")
+        File.rename("#{@filename}.#{i}", "#{@filename}.#{i+1}")
+      end
+    end
+    FileUtils.cp("#{@filename}", "#{@filename}.0")
+    File.truncate @filename, 0
+    add_log_header(@dev)
+    return true
+  end
+
+  def shift_log_period_with_safe_log_rotation(now)
+    postfix = previous_period_end(now).strftime("%Y%m%d") # YYYYMMDD
+    age_file = "#{@filename}.#{postfix}"
+    if FileTest.exist?(age_file)
+      raise RuntimeError.new("'#{ age_file }' already exists.")
+    end
+
+    FileUtils.cp("#{@filename}", age_file)
+    File.truncate @filename, 0
+    add_log_header(@dev)
+    return true
+  end
+
+  alias_method :shift_log_age_without_safe_log_rotation, :shift_log_age
+  alias_method :shift_log_age, :shift_log_age_with_safe_log_rotation
+  alias_method :shift_log_period_without_safe_log_rotation, :shift_log_period
+  alias_method :shift_log_period, :shift_log_period_with_safe_log_rotation
+end
