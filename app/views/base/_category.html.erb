@@ -1,4 +1,4 @@
-<% cache("aab", :action => params[:action], :controller => params[:controller], :category_id => params[:category_id])do %>
+<% cache(:controller => params[:controller], :action => params[:action], :category_id => params[:category_id])do %>
   <% if params[:controller] == "products" %>
     <div id="category_list_box">
       <ul class="category_list_s">

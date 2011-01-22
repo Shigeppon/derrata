@@ -1,6 +1,7 @@
 set :application, "derrata"
 set :user, "shigeo"
 ssh_options[:keys] = %w(home/#{user}/.ssh/id_rsa)
+#ssh_options[:auth_methods] = %w( publickey )
 set :repository,  "git://github.com/Shigeppon/derrata.git"
 
 set :scm, :git
@@ -11,7 +12,7 @@ role :app, "derrata.me"                          # This may be the same as your 
 #role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
 #role :db,  "your slave db-server here"
 
-set :deploy_to, "/home/#{application}"
+set :deploy_to, "/home/#{user}/#{application}"
 
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need
@@ -27,7 +28,6 @@ namespace(:deploy) do
     CMD
   end
 end
-
 
 
 # namespace :deploy do

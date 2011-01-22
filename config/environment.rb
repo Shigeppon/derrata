@@ -4,6 +4,8 @@
 # Specifies gem version of Rails to use when vendor/rails is not present
 #RAILS_GEM_VERSION = '2.3.2' unless defined? RAILS_GEM_VERSION
 
+ENV['RAILS_ENV'] = 'development'
+
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 require 'gettext'
@@ -116,3 +118,4 @@ class Logger::LogDevice
   alias_method :shift_log_period_without_safe_log_rotation, :shift_log_period
   alias_method :shift_log_period, :shift_log_period_with_safe_log_rotation
 end
+
